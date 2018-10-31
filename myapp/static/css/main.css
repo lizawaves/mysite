@@ -1,0 +1,115 @@
+*
+{
+    margin: 0;
+    padding 0;
+}
+
+header
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 3%;
+}
+
+.main-nav li
+{
+    display: inline-block;
+}
+
+.main-nav li a
+{
+    color: ghostwhite;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    
+}
+
+.main-nav li.active a
+{
+    border: 1px solid darkslateblue;
+    
+}
+
+.main-nav li a:hover
+{
+    border: 1px solid papayawhip;
+   
+}
+
+.logo img
+{
+    width: 8%;
+    height: auto;
+    float: left;
+}
+
+body
+{
+    font-family: monospace;
+}
+
+a3
+{
+    font-family: monospace;
+    font-size: 40px;
+    text-align: center;
+    padding: 10%; 
+   
+}
+
+p1
+{
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+    padding: 10%;
+}
+
+form
+{
+    padding: 5% 10%;
+}
+
+.row
+{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box
+{
+    position: relative;
+    margin-top: 150px;
+    width: 90%;
+    height: 70%;
+    background-color: papayawhip;
+    float: left;
+    align-self: center;
+    opacity: 0.9;
+}
+
+#box-home, #box-find-recipe, #box-inser-recipe, #box-about-us
+{
+    margin-top: 10%;
+    margin-left: 5%;
+    position: absolute;
+    float: left;
+    align-self: center;
+    
+}
+
+button
+{
+    margin-left: 10%;
+}

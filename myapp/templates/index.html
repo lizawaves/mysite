@@ -1,0 +1,140 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+
+    <title>Teste</title>
+
+    <!-- CSS -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+      <header>
+          <!-- Menu -->
+          <div class="row">
+              
+                <div class="logo">
+                <img src="{% static 'css/logo.png' %}">
+                </div>
+              
+
+              
+            <ul class="main-nav">
+                <li id="liHome"><a href="#" onclick="myFunction(1)">Home</a></li>
+                <li id="liFindRecipe"><a href="#" onclick="myFunction(2)">Find Recipe</a></li> 
+                <li id="liInsertRecipe"><a href="#" onclick="myFunction(3)">Insert Recipe</a></li> 
+                <li id="liAboutUs"><a href="#" onclick="myFunction(4)">About Us</a></li>
+            </ul>
+          </div>
+          
+          
+          <!-- HOME -->
+          <div id="box-home" style="visibility: visible" class="box">
+              <a3>HOME</a3><br><br>
+              <p1>Hi, welcome to finrecipe.com</p1><br>
+              <p1>We will help you find a recipe with the ingridiants you have at home.</p1>
+                
+          </div>
+          
+          
+          
+          <!-- FIND RECIPE -->
+          <div id="box-find-recipe" style="visibility: hidden" class="box">
+              <a3>Find Recipe</a3>
+              <form id="ingform" action="#">
+                1 ingredient:<br>
+                <input type="text" name="1ing">
+                <br>
+                2 ingredient:<br>
+                <input type="text" name="2ing">
+                <br>
+                3 ingredient:<br>
+                <input type="text" name="3ing">
+                <br>
+                4 ingredient:<br>
+                <input type="text" name="4ing">
+                <br><br>
+                <input type="submit" value="Submit" onclick="funcaddinput()">
+                <input type="button" value="+" onclick="funcaddinput()">
+              </form> 
+              
+              
+                
+          </div>
+          
+          
+          
+          <!-- INSERT RECIPE -->
+          <div id="box-inser-recipe" style="visibility: hidden" class="box">
+               <a3>Insert Recipe</a3>
+                
+          </div>
+          
+          
+          <!-- ABOUT US -->
+          <div id="box-about-us" style="visibility: hidden" class="box">
+               <a3>About Us</a3><br><br>
+              <p1>Hello,</p1><br>
+              <p1>My name is Eliza, and I'm doing this for fun.</p1>
+                
+          </div>
+          
+      </header>
+      
+      
+      
+      <!-- SCRIPTS -->
+      <script>
+          // faz aparecer e desaparecer as caixas centrais
+          
+          function myFunction(x){
+              if(x==1){
+            //document.getElementById('box-home').innerHTML = '<p1>HOME</p1>';
+            document.getElementById('box-home').style.visibility = 'visible';
+            document.getElementById('box-find-recipe').style.visibility = 'hidden';
+            document.getElementById('box-inser-recipe').style.visibility = 'hidden';
+            document.getElementById('box-about-us').style.visibility = 'hidden';
+              }
+              if(x==2){
+            //document.getElementById('box-home').innerHTML = '<p1>Find Recipe</p1>';
+            document.getElementById('box-home').style.visibility = 'hidden';
+            document.getElementById('box-find-recipe').style.visibility = 'visible';
+            document.getElementById('box-inser-recipe').style.visibility = 'hidden';
+            document.getElementById('box-about-us').style.visibility = 'hidden';
+              }
+              if(x==3){
+            //document.getElementById('box-home').innerHTML = '<p1>Inser Recipe</p1>';
+            document.getElementById('box-home').style.visibility = 'hidden';
+            document.getElementById('box-find-recipe').style.visibility = 'hidden';
+            document.getElementById('box-inser-recipe').style.visibility = 'visible';
+            document.getElementById('box-about-us').style.visibility = 'hidden';
+              }
+              if(x==4){
+            //document.getElementById('box-home').innerHTML = '<p1>About Us</p1>';
+            document.getElementById('box-home').style.visibility = 'hidden';
+            document.getElementById('box-find-recipe').style.visibility = 'hidden';
+            document.getElementById('box-inser-recipe').style.visibility = 'hidden';
+            document.getElementById('box-about-us').style.visibility = 'visible';
+              }
+          }
+          
+          // experimentando para criar um formulario dinamico
+          function funcaddinput(ingredient){
+            y = document.getElementsByName('1ing').value;
+            document.getElementById('box-find-recipe').append(y);
+
+          }
+          
+          
+      </script>
+      
+
+  </body>
+
+</html>
