@@ -17,10 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from myapp import views as v
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from todo.views import todoView, addTodo, deleteTodo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', v.index, name="index"),
+    path('todo/', todoView),
+    path('addTodo/', addTodo),
+    path('deleteTodo/<int:todo_id>/', deleteTodo),
 
 ]
 
